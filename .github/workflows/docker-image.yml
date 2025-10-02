@@ -25,7 +25,7 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Tag the Docker image
-      run: docker tag openrport-docker:latest ${{ secrets.DOCKERHUB_USERNAME }}/openrport-docker-newui:latest
+      run: docker tag openrport-docker-newui:latest ${{ secrets.DOCKERHUB_USERNAME }}/openrport-docker-newui:latest
 
     - name: Push the Docker image to DockerHub
       run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/openrport-docker-newui:latest
